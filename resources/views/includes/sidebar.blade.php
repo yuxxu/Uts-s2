@@ -23,14 +23,23 @@ id="accordionSidebar">
 <!-- Divider -->
     <hr class="sidebar-divider">
 
+@if ($showadmin)
     <li class="nav-item active">
         <a class="nav-link" href="/indexkaryawan">
             <i class="fas fa-fw fa-users"></i>
             <span>Karyawan</span>
         </a>
     </li>
+    
+       <li class="nav-item active">
+        <a class="nav-link" href="/gaji">
+            <i class="fas fa-fw fa-credit-card"></i>
+            <span>Data gaji</span>
+        </a>
+    </li>
+@endif
 
-    <hr class="sidebar-divider">
+    {{-- <hr class="sidebar-divider"> --}}
 
     <li class="nav-item active">
         <a class="nav-link" href="/absensi">
@@ -39,13 +48,7 @@ id="accordionSidebar">
         </a>
     </li>
 
-    <hr class="sidebar-divider">
+    {{-- <hr class="sidebar-divider"> --}}
 
-    <li class="nav-item active">
-        <a class="nav-link" href="/gaji">
-            <i class="fas fa-fw fa-credit-card"></i>
-            <span>Data gaji</span>
-        </a>
-    </li>
-
+ 
 </ul>

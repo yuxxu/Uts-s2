@@ -13,18 +13,15 @@ class KaryawanController extends Controller
     {  
 
         $profiles = Profile::all();
-
-
-
+        //variabel showadmin untuk menyimpan autenifikasi role user nya yaitu admin
+        $showadmin = auth ()->user()->isAdmin(); 
 
         $title = 'Peringatan!';
         $text = 'Apakah anda yakin ingin menghapus data?';
         $icon = "Question";
         confirmDelete($title, $text);
 
-
-        
-        return view('karyawan.indexkaryawan', compact('profiles'));
+        return view('karyawan.indexkaryawan', compact('profiles','showadmin'));
 
     }
 
